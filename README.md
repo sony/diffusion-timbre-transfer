@@ -61,3 +61,6 @@ python train.py \
 
 ### Resume run from a checkpoint
 If you want to resume training from a previous checkpoint, uncomment the ckpt: line in the corresponding config.yaml file and provide the path to the .ckpt file. By default, checkpoints generated during training will be saved in the logs/name_of_exp directory.
+
+## Saving a checkpoint
+By default, a log directory is created in the root folder, and for each experiment, a subfolder with the experiment's name is generated. During training, checkpoints are automatically saved in this subfolder.
