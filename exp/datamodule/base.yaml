@@ -1,0 +1,15 @@
+_target_: main.module_base_latent_cond.Datamodule
+dataset:
+  _target_: audio_data_pytorch.WAVDataset
+  recursive: True
+  instruments: ${instruments}
+  path: ${dataset_path}
+  sample_rate: ${sampling_rate}
+  transforms:
+    _target_: audio_data_pytorch.AllTransform
+    random_crop_size: ${length}
+    sign: ${sign}
+val_split: 0.2
+batch_size: 32
+num_workers: 32
+pin_memory: True

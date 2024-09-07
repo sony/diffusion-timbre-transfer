@@ -1,0 +1,27 @@
+# @package _global_
+defaults:
+  - model: latent
+  - loggers: tensorboard
+  - callbacks: base
+  - trainer: full
+  - datamodule: base
+
+
+latent: True 
+cond: False
+instruments: 
+  - bassoon
+exp_name: 'sigma'
+sign: None
+
+sampling_rate: 24000 
+length: 409600                   
+latent_lenght: 1280
+channels: 1
+log_every_n_steps: 1000
+mean_path: 'mean_tensor_enc_bassoon.pt'
+std_path: 'std_tensor_enc_bassoon.pt' 
+diffusion_sigma_data: 1
+sigma_min: 0.001
+sigma_max: 5
+rho: 9.0

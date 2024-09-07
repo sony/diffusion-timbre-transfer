@@ -1,0 +1,29 @@
+# @package _global_
+defaults:
+  - model: latent
+  - loggers: tensorboard
+  - callbacks: base
+  - trainer: full
+  - datamodule: base
+
+
+latent: True 
+cond: False
+instruments: 
+  - flute
+exp_name: 'sigma'
+sign: -1 # Should be None or -1 or 1. This number will be multiplied by num_semitones when applying pitch shift augmentation.
+         # If you want to downshift, set sign to -1. If you want to upshift, set sign to 1. If you don't want to shift, set sign to None.
+
+
+sampling_rate: 24000
+length: 409600                      
+latent_lenght: 1280
+channels: 1
+log_every_n_steps: 1000
+mean_path: 'mean_flute_shifted25.pt' 
+std_path: 'std_flute_shifted25.pt'
+diffusion_sigma_data: 1
+sigma_min: 0.001
+sigma_max: 5
+rho: 9.0

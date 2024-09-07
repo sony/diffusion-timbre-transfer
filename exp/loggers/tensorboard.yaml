@@ -1,0 +1,5 @@
+tensorboard:
+  _target_: pytorch_lightning.loggers.TensorBoardLogger
+  save_dir: ${hydra:run.dir}
+  name: ${exp_name}
+  version: null  # or specify a version, null will auto-increment

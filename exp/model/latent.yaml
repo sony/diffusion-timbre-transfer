@@ -1,0 +1,51 @@
+_target_: main.module_base_latent_cond.Model
+lr: 1e-4
+lr_beta1: 0.95
+lr_beta2: 0.999
+lr_eps: 1e-6
+lr_weight_decay: 1e-3
+total_steps: null
+sampling_rate: ${sampling_rate}
+ema_beta: 0.995
+ema_power: 0.7
+latent: ${latent}
+cond: ${cond}
+mean_path: ${mean_path}
+std_path: ${std_path}
+
+model:
+  _target_: audio_diffusion_pytorch.AudioDiffusionModel #AudioDiffusionConditional for conditional models, #AudioDiffusionModel for non conditional models
+  in_channels: 128 #${channels} for wav, 128 for latent 
+  channels: 128 #128 for latent, 256 for waveform
+  patch_factor: 1 #16 for wav, 1 for latent
+  multipliers: [1, 2, 4, 8, 8, 8] #original [1, 2, 4, 4, 4, 4, 4] #[1, 2, 4, 8, 8, 8] for latent
+  factors: [4, 4, 4, 2, 2] #original [4, 4, 4, 2, 2, 2] #[4, 4, 4, 2, 2] for latent
+  num_blocks: [2, 2, 2, 2, 2] #original [2, 2, 2, 2, 2, 2] # [2, 2, 2, 2, 2] for latent
+  attentions: [0, 1, 1, 1, 1, 1] #original [0, 0, 0, 1, 1, 1, 1] # [0, 1, 1, 1, 1, 1] for latent
+  attention_heads: 8
+  attention_features: 128
+  attention_multiplier: 2
+  resnet_groups: 8
+  kernel_multiplier_downsample: 2
+  use_nearest_upsample: False
+  use_skip_scale: True
+  latent: ${latent}
+  cond: ${cond}
+  diffusion_type: k
+  diffusion_latent: ${latent}
+  diffusion_sigma_distribution:
+    _target_: audio_diffusion_pytorch.KDistribution #UniformDistribution KDistribution #LogNormalDistribution
+    #mean: 0.0
+    #std: 1.0
+    
+    sigma_min: ${sigma_min}
+    sigma_max: ${sigma_max}
+    rho: ${rho}
+  
+  diffusion_sigma_data: ${diffusion_sigma_data} #1 if latent, #0.072 violin_1 #0.086 flute coco, #0.091 bassoon coco, 0.046 std bass slakh2100
+
+  embedding_max_length: 150
+  embedding_features: 128
+  embedding_mask_proba: 0.1
+
+encodec_model: facebook/encodec_24khz  

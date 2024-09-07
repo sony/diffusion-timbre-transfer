@@ -1,0 +1,14 @@
+_target_: pytorch_lightning.Trainer
+gpus: -1 # Set `1` to train on GPU, `0` to train on CPU only, and `-1` to train on all GPUs, default `0`
+precision: 32 # Precision used for tensors, default `32`
+accelerator: gpu # `ddp` GPUs train individually and sync gradients, default `None`
+min_epochs: 0
+max_epochs: 300
+strategy: 
+  _target_: pytorch_lightning.strategies.ddp.DDPStrategy
+  find_unused_parameters: False
+enable_model_summary: False
+log_every_n_steps: 1 # Logs metrics every N batches
+check_val_every_n_epoch: null
+val_check_interval: ${log_every_n_steps}
+accumulate_grad_batches: 1

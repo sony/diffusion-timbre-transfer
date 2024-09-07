@@ -1,0 +1,36 @@
+rich_progress_bar:
+  _target_: pytorch_lightning.callbacks.RichProgressBar
+
+model_checkpoint:
+  _target_: pytorch_lightning.callbacks.ModelCheckpoint
+  monitor: "valid_loss"   # name of the logged metric which determines when model is improving
+  save_top_k: 1           # save k best models (determined by above metric)
+  save_last: True         # additionaly always save model from last epoch
+  mode: "min"             # can be "max" or "min"
+  verbose: False
+  dirpath: ${ckpt_dir}
+  filename: '{epoch:02d}-{valid_loss:.3f}'
+
+model_summary:
+  _target_: pytorch_lightning.callbacks.RichModelSummary
+  max_depth: 2
+
+audio_samples_logger:
+  _target_: main.module_base_latent_cond.SampleLogger
+  num_items: 3
+  channels: ${channels}
+  sampling_rate: ${sampling_rate}
+  length: ${length} 
+  sampling_steps: [3,5,10,25,50,100]
+  latent: ${latent} #TODO check
+  cond: ${cond}
+  mean_path: ${mean_path}
+  std_path: ${std_path}
+  use_ema_model: False
+  diffusion_sampler:
+    _target_: audio_diffusion_pytorch.KarrasSampler #KarrasSampler VSampler ADPM2Sampler
+  diffusion_schedule:
+    _target_: audio_diffusion_pytorch.KarrasSchedule #LinearSchedule KarrasSchedule
+    sigma_min: ${sigma_min}
+    sigma_max: ${sigma_max}
+    rho: ${rho}
