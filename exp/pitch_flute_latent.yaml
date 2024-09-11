@@ -14,6 +14,7 @@ instruments:
 exp_name: 'sigma'
 sign: -1 # Should be None or -1 or 1. This number will be multiplied by num_semitones when applying pitch shift augmentation.
          # If you want to downshift, set sign to -1. If you want to upshift, set sign to 1. If you don't want to shift, set sign to None.
+         # The pitch shift will be by default applied with 35% chance, and the number of semitones will be chosen from uniform distribution (1,25).
 
 
 sampling_rate: 24000
