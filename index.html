@@ -7516,6 +7516,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Latent-Diffusion-Bridges-for-Unsupervised-Musical-Audio-Timbre-Transfer-Demo">Latent Diffusion Bridges for Unsupervised Musical Audio Timbre Transfer Demo<a class="anchor-link" href="#Latent-Diffusion-Bridges-for-Unsupervised-Musical-Audio-Timbre-Transfer-Demo">¶</a></h1><p><a href="https://github.com/sony/diffusion-timbre-transfer">Source code</a></p>
+<p><a href="./Appendix.pdf">Supplmentary Material</a></p>
 </div>
 </div>
 </div>
@@ -7537,7 +7538,7 @@ a.anchor-link {
 </li>
 <li><p><a href="#cycle-consistency">Cycle Consistency</a></p>
 </li>
-<li><p><a href="#appendix">Appendix</a></p>
+<li><p><a href="./Appendix.pdf">Appendix</a></p>
 </li>
 </ol>
 </div>
@@ -7574,6 +7575,16 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <table style="width:100%; table-layout: fixed; border-collapse: collapse;">
+<style>
+    .hover-image {
+        width: 50%; /* Set default width to be smaller */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
+    .hover-image:hover {
+        transform: scale(2.5); /* Scale the image to 120% on hover */
+        z-index: 1; /* Ensure the image is above other elements */
+    }
+</style>
 <tr>
 <th style="text-align: center; width: 50%; border: 1px solid #ddd; padding: 8px;">Source</th>
 <th style="text-align: center; width: 50%; border: 1px solid #ddd; padding: 8px;">Target</th>
@@ -7588,7 +7599,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="flute pitch contour" src="media/normal_instruments/real_flute_pitch.png" style="width:100%;"/>
+<img alt="flute pitch contour" class="hover-image" src="media/normal_instruments/real_flute_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7600,7 +7611,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="violin pitch contour" src="media/normal_instruments/generated_violin_from_flute_pitch.png" style="width:100%;"/>
+<img alt="violin pitch contour" class="hover-image" src="media/normal_instruments/generated_violin_from_flute_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7613,7 +7624,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="trumpet pitch contour" src="media/normal_instruments/generated_trumpet_from_flute_pitch.png" style="width:100%;"/>
+<img alt="trumpet pitch contour" class="hover-image" src="media/normal_instruments/generated_trumpet_from_flute_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7626,7 +7637,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="violin pitch contour" src="media/normal_instruments/real_violin_pitch.png" style="width:100%;"/>
+<img alt="violin pitch contour" class="hover-image" src="media/normal_instruments/real_violin_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7638,7 +7649,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="flute pitch contour" src="media/normal_instruments/generated_flute_from_violin_pitch.png" style="width:100%;"/>
+<img alt="flute pitch contour" class="hover-image" src="media/normal_instruments/generated_flute_from_violin_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7651,7 +7662,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="trumpet pitch contour" src="media/normal_instruments/generated_trumpet_from_violin_pitch.png" style="width:100%;"/>
+<img alt="trumpet pitch contour" class="hover-image" src="media/normal_instruments/generated_trumpet_from_violin_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7664,7 +7675,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="trumpet pitch contour" src="media/normal_instruments/real_trumpet_pitch.png" style="width:100%;"/>
+<img alt="trumpet pitch contour" class="hover-image" src="media/normal_instruments/real_trumpet_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7676,7 +7687,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="flute pitch contour" src="media/normal_instruments/generated_flute_from_trumpet_pitch.png" style="width:100%;"/>
+<img alt="flute pitch contour" class="hover-image" src="media/normal_instruments/generated_flute_from_trumpet_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7689,7 +7700,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="violin pitch contour" src="media/normal_instruments/generated_violin_from_trumpet_pitch.png" style="width:100%;"/>
+<img alt="violin pitch contour" class="hover-image" src="media/normal_instruments/generated_violin_from_trumpet_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7702,7 +7713,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="bassoon pitch contour" src="media/normal_instruments/real_bassoon_pitch.png" style="width:100%;"/>
+<img alt="bassoon pitch contour" class="hover-image" src="media/normal_instruments/real_bassoon_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7714,7 +7725,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="cello pitch contour" src="media/normal_instruments/generated_cello_from_bassoon_pitch.png" style="width:100%;"/>
+<img alt="cello pitch contour" class="hover-image" src="media/normal_instruments/generated_cello_from_bassoon_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7727,7 +7738,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="cello pitch contour" src="media/normal_instruments/real_cello_pitch.png" style="width:100%;"/>
+<img alt="cello pitch contour" class="hover-image" src="media/normal_instruments/real_cello_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7739,7 +7750,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="bassoon pitch contour" src="media/normal_instruments/generated_bassoon_from_cello_pitch.png" style="width:100%;"/>
+<img alt="bassoon pitch contour" class="hover-image" src="media/normal_instruments/generated_bassoon_from_cello_pitch.png"/>
 </div>
 </td>
 </tr></table>
@@ -7766,6 +7777,16 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <table style="width:100%; table-layout: fixed; border-collapse: collapse;">
+<style>
+    .hover-image {
+        width: 50%; /* Set default width to be smaller */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
+    .hover-image:hover {
+        transform: scale(2.5); /* Scale the image to 250% on hover */
+        z-index: 1; /* Ensure the image is above other elements */
+    }
+</style>
 <tr>
 <th style="text-align: center; width: 50%; border: 1px solid #ddd; padding: 8px;">Source</th>
 <th style="text-align: center; width: 50%; border: 1px solid #ddd; padding: 8px;">Target</th>
@@ -7780,7 +7801,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="flute_shifted_0 pitch contour" src="media/pitch_shifted/real_flute_shifted_0_pitch.png" style="width:100%;"/>
+<img alt="flute_shifted_0 pitch contour" class="hover-image" src="media/pitch_shifted/real_flute_shifted_0_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7792,7 +7813,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="bassoon pitch contour" src="media/pitch_shifted/generated_bassoon_from_flute_shifted_0_pitch.png" style="width:100%;"/>
+<img alt="bassoon pitch contour" class="hover-image" src="media/pitch_shifted/generated_bassoon_from_flute_shifted_0_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7805,7 +7826,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="flute_shifted_20 pitch contour" src="media/pitch_shifted/real_flute_shifted_20_pitch.png" style="width:100%;"/>
+<img alt="flute_shifted_20 pitch contour" class="hover-image" src="media/pitch_shifted/real_flute_shifted_20_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7817,7 +7838,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="bassoon pitch contour" src="media/pitch_shifted/generated_bassoon_from_flute_shifted_20_pitch.png" style="width:100%;"/>
+<img alt="bassoon pitch contour" class="hover-image" src="media/pitch_shifted/generated_bassoon_from_flute_shifted_20_pitch.png"/>
 </div>
 </td>
 </tr><tr>
@@ -7830,7 +7851,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="flute_shifted_25 pitch contour" src="media/pitch_shifted/real_flute_shifted_25_pitch.png" style="width:100%;"/>
+<img alt="flute_shifted_25 pitch contour" class="hover-image" src="media/pitch_shifted/real_flute_shifted_25_pitch.png"/>
 </div>
 </td>
 <td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
@@ -7842,7 +7863,7 @@ a.anchor-link {
 </audio>
 </div>
 <div style="margin-top: 10px;">
-<img alt="bassoon pitch contour" src="media/pitch_shifted/generated_bassoon_from_flute_shifted_25_pitch.png" style="width:100%;"/>
+<img alt="bassoon pitch contour" class="hover-image" src="media/pitch_shifted/generated_bassoon_from_flute_shifted_25_pitch.png"/>
 </div>
 </td>
 </tr></table>
@@ -7869,12 +7890,22 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <table style="width:100%; table-layout: fixed; border-collapse: collapse;">
+<style>
+    .hover-image {
+        width: 50%; /* Set default width to be smaller */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
+    .hover-image:hover {
+        transform: scale(2.5); /* Scale the image to 250% on hover */
+        z-index: 1; /* Ensure the image is above other elements */
+    }
+</style>
 <tr>
 <th style="text-align: center; width: 50%; border: 1px solid #ddd; padding: 8px;">Source</th>
 <th style="text-align: center; width: 50%; border: 1px solid #ddd; padding: 8px;">Target</th>
 </tr>
 <tr>
-<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;overflow: visible;">
 <div style="font-weight: bold;">flute</div>
 <div style="margin-top: 5px;">model trained with time chunk size 4 and channel chunk size 0</div>
 <div style="margin-top: 5px;">
@@ -7882,11 +7913,11 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/real_flute_time_4_channel_0.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="flute_time_4_channel_0 pitch contour" src="media/chunk_based_minibatch/real_flute_time_4_channel_0_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="flute_time_4_channel_0 pitch contour" class="hover-image" src="media/chunk_based_minibatch/real_flute_time_4_channel_0_pitch.png"/>
 </div>
 </td>
-<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px; overflow: visible;">
 <div style="font-weight: bold;">violin</div>
 <div style="margin-top: 5px;">DPD: 0.12, JD: 0.0</div>
 <div style="margin-top: 10px;">
@@ -7894,12 +7925,12 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/generated_violin_from_flute_time_4_channel_0.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="violin pitch contour" src="media/chunk_based_minibatch/generated_violin_from_flute_time_4_channel_0_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="violin pitch contour" class="hover-image" src="media/chunk_based_minibatch/generated_violin_from_flute_time_4_channel_0_pitch.png"/>
 </div>
 </td>
 </tr><tr>
-<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;overflow: visible;">
 <div style="font-weight: bold;">flute</div>
 <div style="margin-top: 5px;">model trained with time chunk size 4 and channel chunk size 32</div>
 <div style="margin-top: 5px;">
@@ -7907,11 +7938,11 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/real_flute_time_4_channel_32.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="flute_time_4_channel_32 pitch contour" src="media/chunk_based_minibatch/real_flute_time_4_channel_32_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="flute_time_4_channel_32 pitch contour" class="hover-image" src="media/chunk_based_minibatch/real_flute_time_4_channel_32_pitch.png"/>
 </div>
 </td>
-<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px; overflow: visible;">
 <div style="font-weight: bold;">violin</div>
 <div style="margin-top: 5px;">DPD: 0.2, JD: 0.0</div>
 <div style="margin-top: 10px;">
@@ -7919,12 +7950,12 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/generated_violin_from_flute_time_4_channel_32.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="violin pitch contour" src="media/chunk_based_minibatch/generated_violin_from_flute_time_4_channel_32_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="violin pitch contour" class="hover-image" src="media/chunk_based_minibatch/generated_violin_from_flute_time_4_channel_32_pitch.png"/>
 </div>
 </td>
 </tr><tr>
-<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;overflow: visible;">
 <div style="font-weight: bold;">violin</div>
 <div style="margin-top: 5px;">model trained with time chunk size 4 and channel chunk size 0</div>
 <div style="margin-top: 5px;">
@@ -7932,11 +7963,11 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/real_violin_time_4_channel_0.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="violin_time_4_channel_0 pitch contour" src="media/chunk_based_minibatch/real_violin_time_4_channel_0_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="violin_time_4_channel_0 pitch contour" class="hover-image" src="media/chunk_based_minibatch/real_violin_time_4_channel_0_pitch.png"/>
 </div>
 </td>
-<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px; overflow: visible;">
 <div style="font-weight: bold;">flute</div>
 <div style="margin-top: 5px;">DPD: 0.09, JD: 0.0</div>
 <div style="margin-top: 10px;">
@@ -7944,12 +7975,12 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/generated_flute_from_violin_time_4_channel_0.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="flute pitch contour" src="media/chunk_based_minibatch/generated_flute_from_violin_time_4_channel_0_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="flute pitch contour" class="hover-image" src="media/chunk_based_minibatch/generated_flute_from_violin_time_4_channel_0_pitch.png"/>
 </div>
 </td>
 </tr><tr>
-<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td rowspan="1" style="vertical-align: middle; text-align: center; border: 1px solid #ddd; padding: 8px;overflow: visible;">
 <div style="font-weight: bold;">violin</div>
 <div style="margin-top: 5px;">model trained with time chunk size 4 and channel chunk size 32</div>
 <div style="margin-top: 5px;">
@@ -7957,11 +7988,11 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/real_violin_time_4_channel_32.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="violin_time_4_channel_32 pitch contour" src="media/chunk_based_minibatch/real_violin_time_4_channel_32_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="violin_time_4_channel_32 pitch contour" class="hover-image" src="media/chunk_based_minibatch/real_violin_time_4_channel_32_pitch.png"/>
 </div>
 </td>
-<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px;">
+<td style="vertical-align: top; text-align: center; border: 1px solid #ddd; padding: 8px; overflow: visible;">
 <div style="font-weight: bold;">flute</div>
 <div style="margin-top: 5px;">DPD: 0.13, JD: 0.1</div>
 <div style="margin-top: 10px;">
@@ -7969,8 +8000,8 @@ a.anchor-link {
 <source src="media/chunk_based_minibatch/generated_flute_from_violin_time_4_channel_32.wav" type="audio/wav"/>
 </audio>
 </div>
-<div style="margin-top: 10px;">
-<img alt="flute pitch contour" src="media/chunk_based_minibatch/generated_flute_from_violin_time_4_channel_32_pitch.png" style="width:100%;"/>
+<div style="margin-top: 10px;overflow: visible;">
+<img alt="flute pitch contour" class="hover-image" src="media/chunk_based_minibatch/generated_flute_from_violin_time_4_channel_32_pitch.png"/>
 </div>
 </td>
 </tr></table>
@@ -8364,6 +8395,15 @@ a.anchor-link {
 </tr>
 </table>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
