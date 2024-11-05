@@ -1,6 +1,10 @@
 # Latent Diffusion Bridges for Unsupervised Musical Audio Timbre Transfer
 
-This codebase is for the following [paper](https://arxiv.org/abs/2409.06096). Pretrained model weights and computed Encodec mean and std tensors are available [here](https://zenodo.org/records/13849169).
+This codebase is for the following [paper](https://arxiv.org/abs/2409.06096) with a corresponding [demo](https://sony.github.io/diffusion-timbre-transfer/) page.
+
+Supplementary material for the theoretical results and proofs is also [avaliable](https://sony.github.io/diffusion-timbre-transfer/Appendix.pdf).
+
+Pretrained model weights and computed Encodec mean and std tensors are available [here](https://zenodo.org/records/13849169).
 ## Diffusion Bridges
 An example of running inference for diffusion brindges can be found in `inference.ipynb`. 
 ## Setup
